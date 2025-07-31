@@ -1,11 +1,20 @@
 export function createJoinColumnSelector(index, headers, containerId = "columnSelectors") {
+  const container = document.getElementById(containerId);
+
+  const oldSelect = document.getElementById(`joinColumnSelect-${index}`);
+  if (oldSelect) {
+    oldSelect.remove();
+  }
+
   const select = document.createElement("select");
+  select.id = `joinColumnSelect-${index}`;
   select.dataset.index = index;
-  select.innerHTML = `<option value="">--Colonne de jointure pour fichier ${index + 1}--</option>` +
+  select.innerHTML = `<option value="">--Colonne de jointure pour le fichier--</option>` +
     headers.map(h => `<option value="${h}">${h}</option>`).join("");
 
-  document.getElementById(containerId).appendChild(select);
+  container.appendChild(select);
 }
+
 
 export function createFileInput(name,func,index,parent){
   const label = document.createElement("label");
