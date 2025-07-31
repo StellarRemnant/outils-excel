@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 18px; /* Bigger base font */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Bigger main heading */
+    margin-bottom: 60px;
+}
+
+input[type="file"] {
+    font-size: 18px;
+    padding: 12px 14px;
+}
+
+input, select, button {
+    padding: 14px 18px;
+    margin: 8px 6px;
+    font-size: 18px; /* Bigger inputs and buttons */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.checkbox-group {
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 12px;
+    background: #fff;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 18px; /* Bigger checkbox labels */
+}
+
+.checkbox-group label {
+    display: block;
+    user-select: none;
+    margin-bottom: 6px;
+}
+
+.filter-container {
+    background-color: #fafafa;
+    padding: 16px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    margin-top: 20px;
+    max-width: 800px;
+    width: 100%;
+    font-size: 18px; /* Bigger text inside filter containers */
+}
+
+.filter-container h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.singleDateFilter, .singleKeywordFilter {
+    border: 1px solid #aaa;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 22px; /* Bigger result text */
+    color: #333;
+}
+
+#tableContainer {
+    margin-top: 30px;
+    width: 95vw;
+    overflow-x: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: calc(-1 * 20px);
+    margin-right: calc(-1 * 20px);
+    font-size: 18px; /* Bigger text inside table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 14px 12px; /* Bigger padding for bigger text */
+    text-align: left;
+    white-space: nowrap;
+    font-size: 18px; /* Bigger table cell text */
+}
+
+th {
+    background-color: #e9e9e9;
+}
+
+@media (max-width: 768px) {
+    #tableContainer {
+    max-width: 100%;
+    padding: 8px;
+    overflow-x: auto;
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+    table {
+    min-width: 600px;
+    }
+}

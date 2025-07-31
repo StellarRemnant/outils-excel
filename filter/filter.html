@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Filtrage</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="filter.css" />
+</head>
+<body>
+
+  <h2>Filtrage</h2>
+
+  <input type="file" id="fileInput" accept=".xlsx,.xls" />
+
+  <div id="keywordFilterContainer" class="filter-container" style="display:none;">
+    <h3>Mots clés</h3>
+  </div>
+
+  <div id="dateFilterContainer" class="filter-container" style="display:none;">
+    <h3>Date</h3>
+  </div>
+  <br>
+  <br>
+  <label>Colonnes à afficher :</label>
+  <div id="columnCheckboxes" class="checkbox-group"></div>
+  <br>
+  <div style="margin-top: 20px;">
+    <button onclick="performFilter()" disabled id="filterButton">Filtrer</button>
+    <button onclick="downloadFiltered()" disabled id="downloadButton">Télécharger</button>
+    <button onclick="downloadUnmatchedData()" disabled id="downloadUnmatchedButton">Télécharger le reste</button>
+  </div>
+
+  <h3 id="result">Nombre des lignes correspondantes : 0</h3>
+
+  <div id="tableContainer"></div>
+
+  <script type="module" src="filter.js"></script>
+</body>
+</html>

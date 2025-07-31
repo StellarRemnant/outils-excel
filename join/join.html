@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Croisement</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; }
+    input, button, select { margin: 10px 5px; padding: 8px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #aaa; padding: 8px; }
+    th { background-color: #eee; }
+    #columnSelector { margin-top: 20px; padding: 10px; border: 1px solid #ccc; max-height: 200px; overflow-y: auto; }
+    #columnSelector label { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Joindre des fichiers Excel</h1>
+  <label>Nombre de fichiers :</label>
+  <input type="number" id="fileCount" min="2" value="2" />
+  <button onclick="createInputs()">Créer les entrées</button>
+
+  <form id="fileForm"></form>
+  <div id="columnSelectors"></div>
+  <button onclick="performJoin()">Joindre</button>
+  <br>
+  <label>Colonnes à afficher:</label>
+  <div id="columnSelector"></div>
+  <button onclick="finalizeDisplay()">Afficher les colonnes sélectionnées</button>
+  <button onclick="exportExcel()">Télécharger</button>
+  <button id="downloadUnmatchedBtn" style="display:none;" onclick="downloadUnmatchedRows()">Télécharger les lignes sans correspondance</button>
+
+  <p id="matchCount">Nombre de lignes correspondantes : 0</p>
+  <div id="output"></div>
+
+
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script type='module' src='join.js'></script>
+</body>
+</html>
